@@ -18,6 +18,7 @@ namespace Disable_FSE;
 
 define( 'DISABLE_FSE_VERSION', '0.1.0' );
 define( 'DISABLE_FSE_DIR', plugin_dir_path( __FILE__ ) );
+define( 'DISABLE_FSE_TEMPLATE_DIR', DISABLE_FSE_DIR . 'app' . DIRECTORY_SEPARATOR . 'template' . DIRECTORY_SEPARATOR );
 define( 'DISABLE_FSE_URL', plugin_dir_url( __FILE__ ) );
 define( 'DISABLE_FSE_NAME', basename( __DIR__ ) . DIRECTORY_SEPARATOR . basename( __FILE__ ) );
 
@@ -48,5 +49,6 @@ register_activation_hook( __FILE__, array( '\Disable_FSE\App\Admin', 'activate' 
 
 // Adds a link to the settings page on the plugin overview.
 add_filter( 'plugin_action_links_' . DISABLE_FSE_NAME, array( '\Disable_FSE\App\Admin', 'settings_link' ) );
-
+add_action( 'admin_menu', array( '\Disable_FSE\App\Admin', 'register_menu_page' ) );
+add_action( 'admin_init', array( '\Disable_FSE\App\Admin', 'register_settings' ) );
 // add the rest of the hooks & filters.
