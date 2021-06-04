@@ -1,6 +1,6 @@
 {
   "name": "janw-me/disable-fse",
-  "description": "Disable Full site editing in WordPress",
+  "description": "Allow to disable full site editing in the admin of WordPress",
   "type": "wordpress-plugin",
   "license": "GPLv2 or later",
   "authors": [

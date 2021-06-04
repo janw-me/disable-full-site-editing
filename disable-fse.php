@@ -2,21 +2,21 @@
 /**
  * Plugin Name:       Disable Full site editing
  * Plugin URI:        PLUGIN SITE HERE
- * Description:       Allow to disable full site editing, useful to protect a production site.
+ * Description:       Allow to disable full site editing in the admin.
  * Author:            janw.oostendorp
  * Author URI:        https://janw.me
  * Text Domain:       disable-fse
  * Domain Path:       /languages
  * Requires at least: 5.0
  * Requires PHP:      7.2
- * Version:           0.1.0
+ * Version:           1.0.0
  *
  * @package         Disable_FSE
  */
 
 namespace Disable_FSE;
 
-define( 'DISABLE_FSE_VERSION', '0.1.0' );
+define( 'DISABLE_FSE_VERSION', '1.0.0' );
 define( 'DISABLE_FSE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'DISABLE_FSE_TEMPLATE_DIR', DISABLE_FSE_DIR . 'app' . DIRECTORY_SEPARATOR . 'template' . DIRECTORY_SEPARATOR );
 define( 'DISABLE_FSE_URL', plugin_dir_url( __FILE__ ) );
