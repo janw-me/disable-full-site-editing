@@ -69,7 +69,7 @@ class Helper {
 	}
 
 	/**
-	 * TODO.
+	 * Check if the Full Site editing should be disabled.
 	 *
 	 * @return bool
 	 */
