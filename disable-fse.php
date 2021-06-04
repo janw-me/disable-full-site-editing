@@ -44,11 +44,12 @@ spl_autoload_register( function ( $full_class_name ) { //phpcs:ignore PEAR.Funct
  * Hook everything.
  */
 
-// Plugin activation.
-register_activation_hook( __FILE__, array( '\Disable_FSE\App\Admin', 'activate' ) );
-
 // Adds a link to the settings page on the plugin overview.
-add_filter( 'plugin_action_links_' . DISABLE_FSE_NAME, array( '\Disable_FSE\App\Admin', 'settings_link' ) );
-add_action( 'admin_menu', array( '\Disable_FSE\App\Admin', 'register_menu_page' ) );
-add_action( 'admin_init', array( '\Disable_FSE\App\Admin', 'register_settings' ) );
-// add the rest of the hooks & filters.
+add_filter( 'plugin_action_links_' . DISABLE_FSE_NAME, array( '\Disable_FSE\App\Settings', 'settings_link' ) );
+
+// Settings.
+add_action( 'admin_menu', array( '\Disable_FSE\App\Settings', 'register_menu_page' ) );
+add_action( 'admin_init', array( '\Disable_FSE\App\Settings', 'register_settings' ) );
+
+// Cleanup.
+add_action( 'plugins_loaded', array( 'Disable_FSE\App\Cleaner', 'clean_early' ), 1 );
