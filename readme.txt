@@ -4,7 +4,7 @@ Tags: ful-site-edit
 Requires at least: 5.0
 Tested up to: 5.7.2
 Requires PHP: 7.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,14 +15,22 @@ Allow to disable full site editing in the admin, useful to protect a production 
 Allow to disable full site editing in the admin, useful to protect a production site.
 A block theme will continue to work as intended on the frontend while making sure the theme can't be messed up.
 
-*! Full site editing is in beta, therefore there might be compatability bugs.*
+> *⚠️ Full site editing is in beta, therefore there might be compatability bugs.*
 For the coming months I'll keep testing the plugin with new (beta) releases or gutenberg and WordPres.
 
  - If you find a bug,
  - If you have questions,
  - Feature requests,
  - Anything else,
-Please contact me [here](https://wordpress.org/support/plugin/disable-fse/) or on the github[github repository](https://github.com/janw-me/disable-fse).
+Please contact me [here](https://wordpress.org/support/plugin/disable-full-site-editing/) or on the [github repository](https://github.com/janw-me/disable-fse).
+
+== Tested combinations ==
+
+As Full site editing is in beta I'm keeping up with gutenberg and WordPress beta versions.
+Last updated, june 6th
+
+- WP 5.7.2 & Gutenberg 10.7.2
+- WP 5.8-alpha-51076 & Gutenberg 10.7.2 (Gutenberg required for this WP alpha).
 
 == Installation ==
 
@@ -50,5 +58,8 @@ or to always enable FSE
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.0 =
 * Launch
+
+= 1.0.1 =
+* Added more functions checks.

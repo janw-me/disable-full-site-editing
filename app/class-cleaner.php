@@ -42,13 +42,21 @@ class Cleaner {
 	 */
 	public static function re_add() {
 		// ./gutenberg/lib/full-site-editing/template-loader.php:24:
-		add_action( 'wp_loaded', 'gutenberg_add_template_loader_filters' );
+		if ( function_exists( 'gutenberg_add_template_loader_filters' ) ) {
+			add_action( 'wp_loaded', 'gutenberg_add_template_loader_filters' );
+		}
 		// ./gutenberg/lib/full-site-editing/template-loader.php:120:
-		add_action( 'wp_head', 'gutenberg_viewport_meta_tag', 0 );
+		if ( function_exists( 'gutenberg_viewport_meta_tag' ) ) {
+			add_action( 'wp_head', 'gutenberg_viewport_meta_tag', 0 );
+		}
 		// ./gutenberg/lib/full-site-editing/template-loader.php:124:
-		add_action( 'wp_head', 'gutenberg_render_title_tag', 1 );
+		if ( function_exists( 'gutenberg_render_title_tag' ) ) {
+			add_action( 'wp_head', 'gutenberg_render_title_tag', 1 );
+		}
 		// ./gutenberg/lib/full-site-editing/template-loader.php:267
-		add_filter( 'render_block_context', 'gutenberg_template_render_without_post_block_context' );
+		if ( function_exists( 'gutenberg_template_render_without_post_block_context' ) ) {
+			add_filter( 'render_block_context', 'gutenberg_template_render_without_post_block_context' );
+		}
 	}
 
 	/**
