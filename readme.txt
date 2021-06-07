@@ -30,6 +30,7 @@ As Full site editing is in beta I'm keeping up with gutenberg and WordPress beta
 Last updated, june 6th
 
 - WP 5.7.2 & Gutenberg 10.7.2
+- WP 5.7.2 & Gutenberg 10.7.3
 - WP 5.8-alpha-51076 & Gutenberg 10.7.2 (Gutenberg required for this WP alpha).
 
 == Installation ==
