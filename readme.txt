@@ -71,3 +71,7 @@ or to always enable FSE
 
 * More precise disabling of FSE, it was to broad.
 * Disable adding/editing templates in the editor itself.
+
+= 1.0.3 =
+
+* Fixed a JS bug

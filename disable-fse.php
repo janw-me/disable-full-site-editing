@@ -9,7 +9,7 @@
  * Domain Path:       /languages
  * Requires at least: 5.0
  * Requires PHP:      7.2
- * Version:           1.0.2
+ * Version:           1.0.3
  *
  * @package         Disable_FSE
  */
