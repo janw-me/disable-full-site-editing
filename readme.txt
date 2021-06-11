@@ -4,7 +4,7 @@ Tags: ful-site-edit
 Requires at least: 5.0
 Tested up to: 5.7.2
 Requires PHP: 7.2
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,12 +26,14 @@ Please contact me [here](https://wordpress.org/support/plugin/disable-full-site-
 
 == Tested combinations ==
 
-As Full site editing is in beta I'm keeping up with gutenberg and WordPress beta versions.
-Last updated, june 6th
+As Full site editing is in beta I'm keeping up with Gutenberg and WordPress beta versions.
+Last updated, June 11th
 
-- WP 5.7.2 & Gutenberg 10.7.2
-- WP 5.7.2 & Gutenberg 10.7.3
-- WP 5.8-alpha-51076 & Gutenberg 10.7.2 (Gutenberg required for this WP alpha).
+- WP 5.7.2 & Gutenberg 10.7.0
+- All WP & Gutenberg versions in between the above and below.
+- WP 5.7.2 & Gutenberg 10.8.0
+- WP 5.8-beta1 & Gutenberg 10.8.0.
+- WP 5.8-beta1.
 
 == Installation ==
 

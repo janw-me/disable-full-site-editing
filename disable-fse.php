@@ -16,7 +16,7 @@
 
 namespace Disable_FSE;
 
-define( 'DISABLE_FSE_VERSION', '1.0.2' );
+define( 'DISABLE_FSE_VERSION', '1.0.3' );
 define( 'DISABLE_FSE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'DISABLE_FSE_TEMPLATE_DIR', DISABLE_FSE_DIR . 'app' . DIRECTORY_SEPARATOR . 'template' . DIRECTORY_SEPARATOR );
 define( 'DISABLE_FSE_URL', plugin_dir_url( __FILE__ ) );
