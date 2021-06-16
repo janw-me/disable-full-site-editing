@@ -30,10 +30,10 @@ As Full site editing is in beta I'm keeping up with Gutenberg and WordPress beta
 Last updated, June 11th
 
 - WP 5.7.2 & Gutenberg 10.7.0
-- All WP & Gutenberg versions in between the above and below.
 - WP 5.7.2 & Gutenberg 10.8.0
-- WP 5.8-beta1 & Gutenberg 10.8.0.
-- WP 5.8-beta1.
+- All WP & Gutenberg versions in between the above and below.
+- WP 5.8-beta2 & Gutenberg 10.8.0.
+- WP 5.8-beta2.
 
 == Installation ==
 
