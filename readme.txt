@@ -16,9 +16,7 @@ Allow to disable full site editing in the admin, useful to protect a production 
 A block theme will continue to work as intended on the frontend while making sure the theme can't be messed up.
 
 > *⚠️ Full site editing is in beta, therefore there might be compatability bugs.*
-For the coming months I'll keep testing the plugin with new (beta) releases or gutenberg and WordPres.
-Also between 20 - 26 July I'm on vacation so I can't answer support questions.
-Yes, the day the big 5.8 update lands I'm on vacation... Live happens.
+For the coming months I'll keep testing the plugin with new (beta) releases of gutenberg and WordPres.
 
  - If you find a bug,
  - If you have questions,
@@ -34,8 +32,8 @@ Last updated, June 11th
 - WP 5.7.2 & Gutenberg 10.7.0
 - WP 5.7.2 & Gutenberg 10.8.0
 - All WP & Gutenberg versions in between the above and below.
-- WP 5.8-RC4 & Gutenberg 11.0.0
-- WP 5.8-RC4.
+- WP 5.8 & Gutenberg 11.0.0
+- WP 5.8
 
 == Installation ==
 
