@@ -32,8 +32,8 @@ Last updated, June 11th
 - WP 5.7.2 & Gutenberg 10.7.0
 - WP 5.7.2 & Gutenberg 10.8.0
 - All WP & Gutenberg versions in between the above and below.
-- WP 5.8 & Gutenberg 11.0.0
-- WP 5.8
+- WP 5.8.1 & Gutenberg 11.4.1
+- WP 5.8.1
 
 == Installation ==
 
