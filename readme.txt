@@ -2,17 +2,17 @@
 Contributors: janw.oostendorp
 Tags: ful-site-edit
 Requires at least: 5.0
-Tested up to: 5.9
+Tested up to: 6.0
 Requires PHP: 7.2
-Stable tag: 1.0.3
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Allow to disable full site editing in the admin, useful to protect a production site.
+Allow disabling full site editing in the admin, useful to protect a production site.
 
 == Description ==
 
-Allow to disable full site editing in the admin, useful to protect a production site.
+Allow disabling full site editing in the admin, useful to protect a production site.
 A block theme will continue to work as intended on the frontend while making sure the theme can't be messed up.
 
 > *⚠️ Full site editing is still fresh.*
@@ -27,7 +27,7 @@ Please contact me [here](https://wordpress.org/support/plugin/disable-full-site-
 == Installation ==
 
 Just install the plugin and activate.
-There is a admin settings page or set the `DISABLE_FSE` constant.
+There is an admin settings page or set the `DISABLE_FSE` constant.
 
 == Frequently Asked Questions ==
 
@@ -50,17 +50,19 @@ or to always enable FSE
 
 == Changelog ==
 
-= 1.0.0 =
-* Launch
+= 1.1.0 =
+* Fixed a couple of bugs.
+* Now also tested on multisite.
+
+= 1.0.3 =
+* Fixed a JS bug
+
+= 1.0.2 =
+* More precise disabling of FSE, it was to broad.
+* Disable adding/editing templates in the editor itself.
 
 = 1.0.1 =
 * Added more functions checks.
 
-= 1.0.2 =
-
-* More precise disabling of FSE, it was to broad.
-* Disable adding/editing templates in the editor itself.
-
-= 1.0.3 =
-
-* Fixed a JS bug
+= 1.0.0 =
+* Launch

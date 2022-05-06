@@ -44,6 +44,11 @@ class Cleaner {
 		remove_filter( 'custom_menu_order', '__return_true' );
 		// ./gutenberg/lib/full-site-editing/full-site-editing.php:105
 		remove_filter( 'menu_order', 'gutenberg_menu_order' );
+
+		add_action('template_redirect', function() {
+			// ./wp-includes/class-wp-admin-bar.php:645
+			remove_action( 'admin_bar_menu', 'wp_admin_bar_edit_site_menu', 40 );
+		}, 100);
 	}
 
 	/**
@@ -52,6 +57,7 @@ class Cleaner {
 	public static function remove_menus() {
 		remove_submenu_page( 'themes.php', 'edit.php?post_type=wp_template' );
 		remove_submenu_page( 'themes.php', 'edit.php?post_type=wp_template_part' );
+		remove_submenu_page( 'themes.php', 'site-editor.php' );
 	}
 
 	/**
