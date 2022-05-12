@@ -28,7 +28,7 @@ if ( defined( 'DISABLE_FSE' ) ) {
 		disabled( $disabled );
 		?>
 	>
-	<label for="disable-fse-on"><?php _e( '<i>Enable</i> site editing ', 'disable-fse' ); ?></label>
+	<label for="disable-fse-on"><?php _e( '<i>Enable</i> site editing', 'disable-full-site-editing' ); ?></label>
 	<br/>
 
 	<input type="radio" id="disable-fse-off" name="disable_fse[status]" value="off"
@@ -38,7 +38,7 @@ if ( defined( 'DISABLE_FSE' ) ) {
 		?>
 
 	>
-	<label for="disable-fse-off"><?php _e( '<i>Disable</i> site editing', 'disable-fse' ); ?></label>
+	<label for="disable-fse-off"><?php _e( '<i>Disable</i> site editing', 'disable-full-site-editing' ); ?></label>
 	<br/>
 
 	<input type="radio" id="disable-fse-or" name="disable_fse[status]" value="or"
@@ -48,14 +48,14 @@ if ( defined( 'DISABLE_FSE' ) ) {
 		?>
 	>
 	<label
-		for="disable-fse-or"><?php _e( 'Respect the <code>WP_ENVIRONMENT_TYPE</code> constant', 'disable-fse' ); ?></label>
+		for="disable-fse-or"><?php _e( 'Respect the <code>WP_ENVIRONMENT_TYPE</code> constant', 'disable-full-site-editing' ); ?></label>
 	<br/>
 	<p class="description" style="padding-left: 2em;">
-		<?php _e( 'Will <i>enable</i> when set to <code>local</code> or <code>development</code>', 'disable-fse' ); ?><br/>
-		<?php _e( 'Will <i>Disable</i> when set to <code>staging</code> or <code>production</code>', 'disable-fse' ); ?><br/>
+		<?php _e( 'Will <i>enable</i> when set to <code>local</code> or <code>development</code>', 'disable-full-site-editing' ); ?><br/>
+		<?php _e( 'Will <i>Disable</i> when set to <code>staging</code> or <code>production</code>', 'disable-full-site-editing' ); ?><br/>
 		<?php
 		// translators: The value for the current wp environment.
-		printf( __( 'Currently set to <code>%s</code>', 'disable-fse' ), wp_get_environment_type() );
+		printf( __( 'Currently set to <code>%s</code>', 'disable-full-site-editing' ), wp_get_environment_type() );
 		?>
 	</p>
 </fieldset>

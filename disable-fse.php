@@ -5,7 +5,7 @@
  * Description:       Allow disabling full site editing in the admin.
  * Author:            janw.oostendorp
  * Author URI:        https://janw.me
- * Text Domain:       disable-fse
+ * Text Domain:       disable-full-site-editing
  * Domain Path:       /languages
  * Requires at least: 5.0
  * Requires PHP:      7.2
