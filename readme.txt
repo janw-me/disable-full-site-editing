@@ -4,7 +4,7 @@ Tags: ful-site-edit
 Requires at least: 5.0
 Tested up to: 6.0
 Requires PHP: 7.2
-Stable tag: 1.1.0
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,7 +22,7 @@ For the coming months I'll keep testing the plugin with new (beta) releases of g
  - If you have questions,
  - Feature requests,
  - Anything else,
-Please contact me [here](https://wordpress.org/support/plugin/disable-full-site-editing/) or on the [github repository](https://github.com/janw-me/disable-fse).
+Please contact me [on the forum](https://wordpress.org/support/plugin/disable-full-site-editing/) or on the [github repository](https://github.com/janw-me/disable-fse).
 
 == Installation ==
 
@@ -53,6 +53,9 @@ or to always enable FSE
 = 1.1.0 =
 * Fixed a couple of bugs.
 * Now also tested on multisite.
+
+= 1.0.4 =
+* The translations via Polyglot now work correctly thanks to [Alex Lion](https://profiles.wordpress.org/alexclassroom/)
 
 = 1.0.3 =
 * Fixed a JS bug
