@@ -23,12 +23,12 @@ class Helper {
 		global $wp_version;
 
 		$setup_statuses = array(
-			'full'              => __( 'The complete full site editing is available. And the theme supports it.', 'disable-fse' ),
-			'full-no-theme'     => __( 'The complete full site editing is available. But the current theme does not support it.', 'disable-fse' ),
-			'template'          => __( 'Custom templates are supported. And the theme supports it.', 'disable-fse' ),
-			'template-no-theme' => __( 'Custom templates are supported. But the current theme does not support it.', 'disable-fse' ),
-			'only-theme'        => __( 'Your theme supports full site editing, install the Gutenberg plugin to use it.', 'disable-fse' ),
-			'nothing'           => __( 'Full site editing is not enabled, to enable install the Gutenberg plugin and a compatible theme like TT1 Blocks.', 'disable-fse' ),
+			'full'              => __( 'The complete full site editing is available. And the theme supports it.', 'disable-full-site-editing' ),
+			'full-no-theme'     => __( 'The complete full site editing is available. But the current theme does not support it.', 'disable-full-site-editing' ),
+			'template'          => __( 'Custom templates are supported. And the theme supports it.', 'disable-full-site-editing' ),
+			'template-no-theme' => __( 'Custom templates are supported. But the current theme does not support it.', 'disable-full-site-editing' ),
+			'only-theme'        => __( 'Your theme supports full site editing, install the Gutenberg plugin to use it.', 'disable-full-site-editing' ),
+			'nothing'           => __( 'Full site editing is not enabled, to enable install the Gutenberg plugin and a compatible theme like TT1 Blocks.', 'disable-full-site-editing' ),
 		);
 		$key            = '';
 

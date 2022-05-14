@@ -30,8 +30,8 @@ class Settings {
 	public static function register_menu_page() {
 		add_submenu_page(
 			'tools.php',
-			__( 'Disable Full site editing Settings', 'disable-fse' ),
-			__( 'Disable Full site editing', 'disable-fse' ),
+			__( 'Disable Full site editing Settings', 'disable-full-site-editing' ),
+			_x( 'Disable Full site editing', 'Side Menu Item','disable-full-site-editing' ),
 			'manage_options',
 			'disable-fse',
 			function () {
@@ -61,7 +61,7 @@ class Settings {
 			'disable-fse'
 		);
 
-		$title = __( 'Toggle on/off', 'disable-fse' );
+		$title = __( 'Toggle on/off', 'disable-full-site-editing' );
 		add_settings_field(
 			'disable_fse_status',
 			$title,
