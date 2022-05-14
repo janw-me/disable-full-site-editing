@@ -17,5 +17,10 @@
     "phpcompatibility/phpcompatibility-wp": "^2.1.0",
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
     "wptrt/wpthemereview": "^0.2.1"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
   }
 }

@@ -50,12 +50,12 @@ or to always enable FSE
 
 == Changelog ==
 
+= 1.1.1 =
+* The translations via Polyglot now work correctly thanks to [Alex Lion](https://profiles.wordpress.org/alexclassroom/)
+
 = 1.1.0 =
 * Fixed a couple of bugs.
 * Now also tested on multisite.
-
-= 1.0.4 =
-* The translations via Polyglot now work correctly thanks to [Alex Lion](https://profiles.wordpress.org/alexclassroom/)
 
 = 1.0.3 =
 * Fixed a JS bug
