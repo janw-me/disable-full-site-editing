@@ -22,7 +22,7 @@ For the coming months I'll keep testing the plugin with new (beta) releases of g
  - If you have questions,
  - Feature requests,
  - Anything else,
-Please contact me [on the forum](https://wordpress.org/support/plugin/disable-full-site-editing/) or on the [github repository](https://github.com/janw-me/disable-fse).
+Please contact me [on the forum](https://wordpress.org/support/plugin/disable-full-site-editing/) or on the [github repository](https://github.com/janw-me/disable-full-site-editing).
 
 == Installation ==
 
