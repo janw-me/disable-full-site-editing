@@ -31,7 +31,7 @@ class Settings {
 		add_submenu_page(
 			'tools.php',
 			__( 'Disable Full site editing Settings', 'disable-full-site-editing' ),
-			_x( 'Disable Full site editing', 'Side Menu Item','disable-full-site-editing' ),
+			_x( 'Disable Full site editing', 'Side Menu Item', 'disable-full-site-editing' ),
 			'manage_options',
 			'disable-fse',
 			function () {

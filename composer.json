@@ -11,6 +11,14 @@
   "require": {
     "php": ">=7.2"
   },
+  "scripts": {
+    "phpcbf": "@php vendor/bin/phpcbf || true",
+    "phpcs": "@php vendor/bin/phpcs",
+    "ci": [
+      "@phpcbf",
+      "@phpcs"
+    ]
+  },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.2",
     "wp-coding-standards/wpcs": "^2.2.0",

@@ -6,6 +6,7 @@
 .eslintignore
 .eslintrc
 .git
+.gitattributes
 .gitignore
 .github
 .gitlab-ci.yml
@@ -22,6 +23,9 @@ dependencies.yml
 Gruntfile.js
 package.json
 package-lock.json
+.phpstan.php
+phpstan.neon
+phpstan.neon.dist
 phpunit.xml
 phpunit.xml.dist
 multisite.xml
@@ -40,4 +44,4 @@ node_modules
 *.sql
 *.tar.gz
 *.zip
-make-zip.sh
+readme.md

@@ -45,10 +45,12 @@ class Cleaner {
 		// ./gutenberg/lib/full-site-editing/full-site-editing.php:105
 		remove_filter( 'menu_order', 'gutenberg_menu_order' );
 
+		//phpcs:disable PEAR.Functions.FunctionCallSignature
 		add_action('template_redirect', function() {
 			// ./wp-includes/class-wp-admin-bar.php:645
 			remove_action( 'admin_bar_menu', 'wp_admin_bar_edit_site_menu', 40 );
 		}, 100);
+		//phpcs:enable PEAR.Functions.FunctionCallSignature
 	}
 
 	/**
