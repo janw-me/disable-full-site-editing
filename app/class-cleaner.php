@@ -70,6 +70,11 @@ class Cleaner {
 			return;
 		}
 
+		$screen = get_current_screen();
+		if ( 'widgets' === $screen->id ) {
+			return; // Don't load on these pages.
+		}
+
 		wp_enqueue_script(
 			'disable-fse-js',
 			DISABLE_FSE_URL . 'src/disable-fse.js',
