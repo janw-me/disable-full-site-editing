@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Disable Full site editing
- * Plugin URI:        PLUGIN SITE HERE
+ * Plugin URI:        https://wordpress.org/plugins/disable-full-site-editing/
  * Description:       Allow disabling full site editing in the admin.
  * Author:            janw.oostendorp
  * Author URI:        https://janw.me
@@ -9,14 +9,14 @@
  * Domain Path:       /languages
  * Requires at least: 5.0
  * Requires PHP:      7.2
- * Version:           1.1.3
+ * Version:           1.2.0
  *
  * @package         Disable_FSE
  */
 
 namespace Disable_FSE;
 
-define( 'DISABLE_FSE_VERSION', '1.1.3' );
+define( 'DISABLE_FSE_VERSION', '1.2.0' );
 define( 'DISABLE_FSE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'DISABLE_FSE_TEMPLATE_DIR', DISABLE_FSE_DIR . 'app' . DIRECTORY_SEPARATOR . 'template' . DIRECTORY_SEPARATOR );
 define( 'DISABLE_FSE_URL', plugin_dir_url( __FILE__ ) );
@@ -51,5 +51,6 @@ add_filter( 'plugin_action_links_' . DISABLE_FSE_NAME, array( '\Disable_FSE\App\
 add_action( 'admin_menu', array( '\Disable_FSE\App\Settings', 'register_menu_page' ) );
 add_action( 'admin_init', array( '\Disable_FSE\App\Settings', 'register_settings' ) );
 
-// Cleanup.
-add_action( 'plugins_loaded', array( 'Disable_FSE\App\Cleaner', 'clean_early' ), 1 );
+// Remove everything.
+add_filter( 'block_editor_settings_all', array( '\Disable_FSE\App\Cleaner', 'remove_new_templates' ) );
+add_filter( 'theme_file_path', array( '\Disable_FSE\App\Cleaner', 'hide_html_templates' ) );

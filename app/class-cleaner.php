@@ -14,73 +14,46 @@ use PHP_CodeSniffer\Standards\Squiz\Sniffs\Classes\SelfMemberReferenceSniff;
  */
 class Cleaner {
 
-
 	/**
-	 * Removal of all actions & filters as soon as available te remove.
+	 * In the editor remove the ability to create new templates.
+	 * Only allow to select from the existing ones.
+	 *
+	 * @param array $editor_settings The current editor settings.
+	 *
+	 * @return array
 	 */
-	public static function clean_early() {
+	public static function remove_new_templates( $editor_settings ) {
 		if ( ! Helper::should_disable_fse() ) {
-			return;
+			return $editor_settings; // Disable FSE not active.
 		}
+		$editor_settings['supportsTemplateMode'] = false;
 
-		// menu items need to be removed later.
-		add_action( 'admin_menu', array( self::class, 'remove_menus' ), 100 );
-
-		// Add a script that will disable the template buttons.
-		add_action( 'enqueue_block_editor_assets', array( 'Disable_FSE\App\Cleaner', 'enqueue_template_stripper' ) );
-
-		// ./gutenberg/lib/init.php:108
-		remove_action( 'admin_menu', 'gutenberg_site_editor_menu', 9 );
-		// ./gutenberg/lib/full-site-editing/full-site-editing.php:67:
-		remove_action( 'admin_menu', 'gutenberg_remove_legacy_pages' );
-		// ./gutenberg/lib/full-site-editing/full-site-editing.php:99:
-		remove_action( 'admin_bar_menu', 'gutenberg_adminbar_items', 50 );
-		// ./gutenberg/lib/full-site-editing/templates.php:160:
-		remove_action( 'admin_menu', 'gutenberg_fix_template_admin_menu_entry' );
-		// ./gutenberg/lib/full-site-editing/template-parts.php:129:
-		remove_action( 'admin_menu', 'gutenberg_fix_template_part_admin_menu_entry' );
-
-		// ./gutenberg/lib/full-site-editing/full-site-editing.php:104
-		remove_filter( 'custom_menu_order', '__return_true' );
-		// ./gutenberg/lib/full-site-editing/full-site-editing.php:105
-		remove_filter( 'menu_order', 'gutenberg_menu_order' );
-
-		//phpcs:disable PEAR.Functions.FunctionCallSignature
-		add_action('template_redirect', function() {
-			// ./wp-includes/class-wp-admin-bar.php:645
-			remove_action( 'admin_bar_menu', 'wp_admin_bar_edit_site_menu', 40 );
-		}, 100);
-		//phpcs:enable PEAR.Functions.FunctionCallSignature
+		return $editor_settings;
 	}
 
 	/**
-	 * Remove the menu items for the custom post types.
+	 * The existence of .html files in the theme is used to define a block theme.
+	 * In the admin we hide all .html templates to disable FSE.
+	 *
+	 * @param string $path The path to a template file.
+	 *
+	 * @return string
+	 *
+	 * @see wp_is_block_theme() The function we "break".
 	 */
-	public static function remove_menus() {
-		remove_submenu_page( 'themes.php', 'edit.php?post_type=wp_template' );
-		remove_submenu_page( 'themes.php', 'edit.php?post_type=wp_template_part' );
-		remove_submenu_page( 'themes.php', 'site-editor.php' );
-	}
-
-	/**
-	 * Add ht escript that will remove the "new" & "edit" from the templates
-	 */
-	public static function enqueue_template_stripper() {
-		if ( ! post_type_exists( 'wp_template' ) ) {
-			return;
+	public static function hide_html_templates( $path ) {
+		if ( ! Helper::should_disable_fse() ) {
+			return $path;  // Disable FSE not active.
+		}
+		if ( ! is_admin() ) {
+			return $path; // We only check the admin, otherwise the frontend would break.
 		}
 
-		$screen = get_current_screen();
-		if ( 'widgets' === $screen->id ) {
-			return; // Don't load on these pages.
+		if ( str_ends_with( $path, '.html' ) ) {
+			return $path . '.disable-fse'; // append '.disable-fse' to the filename, now it's not an html file anymore.
 		}
 
-		wp_enqueue_script(
-			'disable-fse-js',
-			DISABLE_FSE_URL . 'src/disable-fse.js',
-			array( 'wp-blocks', 'wp-element', 'wp-components', 'wp-i18n' ),
-			DISABLE_FSE_VERSION,
-			true
-		);
+		return $path;
 	}
+
 }

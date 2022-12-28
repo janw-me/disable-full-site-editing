@@ -2,9 +2,9 @@
 Contributors: janw.oostendorp
 Tags: ful-site-edit
 Requires at least: 5.0
-Tested up to: 6.0
+Tested up to: 6.1.1
 Requires PHP: 7.2
-Stable tag: 1.1.3
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,6 +49,10 @@ or to always enable FSE
 	define( 'DISABLE_FSE', false );
 
 == Changelog ==
+
+= 1.2.0 =
+* Implemented a far more deed level disabling of FSE. Previously we just removed links in the admin.
+  Now we just fake the current theme to not appear as FSE.
 
 = 1.1.3 =
 * Fixed an JS error on the widgets page.
