@@ -2,7 +2,7 @@
 Contributors: janw.oostendorp
 Tags: ful-site-edit
 Requires at least: 5.0
-Tested up to: 6.6.2
+Tested up to: 6.7.1
 Requires PHP: 7.2
 Stable tag: 1.2.0
 License: GPLv2 or later
